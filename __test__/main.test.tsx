@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import { describe } from 'node:test';
-import Main from '@/app/Components/Main';
+import Main from '@/components/Main';
 
 describe('<Main />', () => {
   it('shoudl render the heading', () => {

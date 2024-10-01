@@ -1,22 +1,12 @@
+import Providers from "@/providers";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import StyledComponentsRegistry from "@/styles/registry";
-import GlobalStyle from "@/styles/global";
+import { Inter } from "next/font/google";
 
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "React Avançado - Boileplate",
+  title: "React Avançado - Boilerplate",
   description: "A simple project started to work with Typescript, React, NextJS and Styled Components"
 }
 
@@ -31,9 +21,8 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/img/icon-512.png" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <GlobalStyle />
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      <body className={inter.className}>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
