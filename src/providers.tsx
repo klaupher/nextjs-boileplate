@@ -1,6 +1,6 @@
 'use client'
 
-import { ThemeProvider } from "next-theme";
+import { ThemeProvider } from "next-themes";
 import StyledComponentsRegistry from "./app/lib/registry";
 import GlobalStyle from "./app/global.style";
 
